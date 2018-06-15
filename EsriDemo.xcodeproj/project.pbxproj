@@ -12,7 +12,7 @@
 		385D40B620D33C27001B11CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B420D33C27001B11CB /* Main.storyboard */; };
 		385D40B820D33C29001B11CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B720D33C29001B11CB /* Assets.xcassets */; };
 		385D40BB20D33C29001B11CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B920D33C29001B11CB /* LaunchScreen.storyboard */; };
-		9365821DC6DEB2E0DC4C226C /* libPods-EsriDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */; };
+		D2822388B7E2774BDC174027 /* Pods_EsriDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528D3237C20F28C47603A9FD /* Pods_EsriDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		385D40B720D33C29001B11CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385D40BA20D33C29001B11CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385D40BC20D33C29001B11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528D3237C20F28C47603A9FD /* Pods_EsriDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsriDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7447A0857B84F4220BCA4430 /* Pods-EsriDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsriDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo.release.xcconfig"; sourceTree = "<group>"; };
 		91CF239AD1F60DB66EF7067B /* Pods-EsriDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsriDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EsriDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9365821DC6DEB2E0DC4C226C /* libPods-EsriDemo.a in Frameworks */,
+				D2822388B7E2774BDC174027 /* Pods_EsriDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +43,7 @@
 		25BFB0947513986C2CAB9EBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */,
+				528D3237C20F28C47603A9FD /* Pods_EsriDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ArcGIS.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -376,7 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57N5FB8G75;
+				DEVELOPMENT_TEAM = 8KZNR62J66;
 				INFOPLIST_FILE = EsriDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57N5FB8G75;
+				DEVELOPMENT_TEAM = 8KZNR62J66;
 				INFOPLIST_FILE = EsriDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
