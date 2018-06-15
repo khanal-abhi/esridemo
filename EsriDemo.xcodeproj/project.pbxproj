@@ -12,6 +12,7 @@
 		385D40B620D33C27001B11CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B420D33C27001B11CB /* Main.storyboard */; };
 		385D40B820D33C29001B11CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B720D33C29001B11CB /* Assets.xcassets */; };
 		385D40BB20D33C29001B11CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385D40B920D33C29001B11CB /* LaunchScreen.storyboard */; };
+		9365821DC6DEB2E0DC4C226C /* libPods-EsriDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		385D40B720D33C29001B11CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385D40BA20D33C29001B11CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385D40BC20D33C29001B11CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7447A0857B84F4220BCA4430 /* Pods-EsriDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsriDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo.release.xcconfig"; sourceTree = "<group>"; };
+		91CF239AD1F60DB66EF7067B /* Pods-EsriDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsriDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EsriDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9365821DC6DEB2E0DC4C226C /* libPods-EsriDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25BFB0947513986C2CAB9EBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A524988DE46BC3B4FE71EC35 /* libPods-EsriDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		385D40A420D33C27001B11CB = {
 			isa = PBXGroup;
 			children = (
 				385D40AF20D33C27001B11CB /* EsriDemo */,
 				385D40AE20D33C27001B11CB /* Products */,
+				C9E2FB414C8C85A18170F5C1 /* Pods */,
+				25BFB0947513986C2CAB9EBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = EsriDemo;
 			sourceTree = "<group>";
 		};
+		C9E2FB414C8C85A18170F5C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91CF239AD1F60DB66EF7067B /* Pods-EsriDemo.debug.xcconfig */,
+				7447A0857B84F4220BCA4430 /* Pods-EsriDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 385D40BF20D33C29001B11CB /* Build configuration list for PBXNativeTarget "EsriDemo" */;
 			buildPhases = (
+				2F77F2A7047190B106591E6D /* [CP] Check Pods Manifest.lock */,
 				385D40A920D33C27001B11CB /* Sources */,
 				385D40AA20D33C27001B11CB /* Frameworks */,
 				385D40AB20D33C27001B11CB /* Resources */,
+				C9F8A2921120114C70E78F6D /* [CP] Embed Pods Frameworks */,
+				17AC1751C29ACB21F88CB47F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +123,14 @@
 				TargetAttributes = {
 					385D40AC20D33C27001B11CB = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +164,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17AC1751C29ACB21F88CB47F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo-resources.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework/ArcGIS.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F77F2A7047190B106591E6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EsriDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F8A2921120114C70E78F6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo-frameworks.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/ArcGIS.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EsriDemo/Pods-EsriDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		385D40A920D33C27001B11CB /* Sources */ = {
@@ -278,11 +372,13 @@
 		};
 		385D40C020D33C29001B11CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91CF239AD1F60DB66EF7067B /* Pods-EsriDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KZNR62J66;
+				DEVELOPMENT_TEAM = 57N5FB8G75;
 				INFOPLIST_FILE = EsriDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +392,13 @@
 		};
 		385D40C120D33C29001B11CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7447A0857B84F4220BCA4430 /* Pods-EsriDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KZNR62J66;
+				DEVELOPMENT_TEAM = 57N5FB8G75;
 				INFOPLIST_FILE = EsriDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
